@@ -1,0 +1,21 @@
+<div class="mb-3" id="ico-items">
+<!--IMPORTANT Diretiva ngClass para fazer atribuicoes de classes-->
+  <h2 class="text-center">[ngClass]</h2>
+  <div>
+    <h5>Utilizando Class Binding</h5>
+  <i class="bi"
+     [class.bi-star]="!meuFavorito"
+     [class.bi-star-fill]="meuFavorito"
+     [class.star-fill]="meuFavorito"
+     (click)="alterarEstrela()"></i>
+  </div>
+  <div>
+    <h5>Utilizando [ngClass]</h5>
+  <i class="bi"
+     [ngClass]="{
+     'bi-star': !meuFavorito2,
+     'bi-star-fill': meuFavorito2,
+     'star-fill': meuFavorito2}"
+     (click)="meuFavorito2 = !meuFavorito2"></i>
+  </div>
+</div>

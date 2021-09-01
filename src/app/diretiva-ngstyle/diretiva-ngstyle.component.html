@@ -1,0 +1,31 @@
+<div class="mb-3">
+  <!--IMPORTANT Diretiva ngStyle para fazer atribuicoes de stylos-->
+  <h2 class="text-center">[ngStyle]</h2>
+  <div class="mb-3">
+    <label for="tamanhoFonte">Fonte Size</label>
+    <input type="text" id="tamanhoFonte" [(ngModel)]="tamanhoFonte">
+  </div>
+  <div class="mb-3">
+    <h5>Utlizando Style Binding</h5>
+    <button
+      [style.backgroundColor]="ativo ? 'green' : 'red'"
+      [style.color]="ativo ? 'white' : 'black'"
+      [style.fontWeight]="ativo ? 'bold' : 'normal'"
+      [style.fontSize]="tamanhoFonte + 'px'"
+      (click)="alterarStyleButton()">
+      Mudar atributo Style
+    </button>
+  </div>
+  <div class="mb-3">
+    <h5>Utilizando [ngStyle]</h5>
+    <button
+      [ngStyle]="{
+    'backgroundColor': (ativo2 ? 'green' : 'red'),
+    'color': (ativo2 ? 'white' : 'black'),
+    'fontWeight': (ativo2 ? 'bold' : 'normal'),
+    'fontSize': tamanhoFonte + 'px'
+    }" (click)="alterarStyleButton2()">
+      Mudar atributo Style
+    </button>
+  </div>
+</div>
