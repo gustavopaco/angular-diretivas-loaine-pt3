@@ -1,8 +1,18 @@
 <div class="mb-3" >
+  <!--Important: Diretiva utilizando Atributo ElementRef e Renderer2-->
   <h2 class="text-center">Diretiva de Atributo</h2>
+  <h6 class="text-center">Element Ref e Renderer2</h6>
   <p fundoAmarelo>Texto com fundo amarelo</p>
   <button fundoAmarelo>Botao com fundo amarelo</button>
 </div>
 <div class="mb-3">
+  <!--Important: Diretiva utilizando Annotations @ HostListener para ouvir evento e @ HostBinding que define qual tipo de atributo sera alterado nesse caso Style-->
+  <h6 class="text-center">@ HostListener - Escuta evento | @ HostBinding - Define Propriedade a ser alterada</h6>
   <p highlightMouse>Texto com highlight quando passo o mouse</p>
+</div>
+  <!--Important: Diretiva utilizando Annotations @ HostListener para ouvir evento e @ HostBinding que define qual tipo de atributo sera alterado nesse caso Style
+        e utilizando InputProperty para criar valores padroes que podem ser SobreEscritos pelo Usuario-->
+  <h6 class="text-center">@ HostListener - Escuta evento | @ HostBinding - Define Propriedade a ser alterada | @ Input propriedade sobreescrita onde o cliente define a COR</h6>
+<div class="mb-3" [highlight]="'cyan'" [defaultColor]="'grey'">
+  <p>Texto com highlight com cores customizadas</p>
 </div>
