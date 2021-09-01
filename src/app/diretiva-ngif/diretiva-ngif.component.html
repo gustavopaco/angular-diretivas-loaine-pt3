@@ -1,0 +1,36 @@
+<div class="container mb-3">
+  <!--IMPORTANT: Diretiva ngIf-->
+  <h2 class="text-center">*ngIf</h2>
+  <div *ngIf="cursos.length > 0">
+    Lista de cursos aqui
+  </div>
+  <div *ngIf="cursos.length == 0">
+    Nao existem cursos para serem listados.
+  </div>
+
+  <div *ngIf="mostrarCursos">
+    Lista de cursos aqui
+  </div>
+  <div *ngIf="!mostrarCursos">
+    Nao existem cursos para serem listados.
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+  </div>
+
+  <div [hidden]="!mostrarCursos">
+    Lista de cursos aqui
+  </div>
+  <div [hidden]="mostrarCursos">
+    Nao existem cursos para serem listados.
+  </div>
+
+  <!--IMPORTANT: Diretiva Template, como o *ngIf funciona por tras dos panos, eh criado um ng-template que valida a expressao-->
+  <h5>Removendo o * do *ngIf e usando template</h5>
+
+  <ng-template [ngIf]="mostrarCursos">
+    <div>Template de cursos aqui</div>
+  </ng-template>
+
+
+</div>
