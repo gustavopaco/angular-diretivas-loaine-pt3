@@ -1,0 +1,15 @@
+<div class="mb-3">
+  <!--IMPORTANT: Operador Elvis para validar se atributo de objeto eh nulo e nao ocasionar NullPointerException-->
+  <h2 class="text-center">Operador Elvis '?'</h2>
+  <h6 class="text-center">Valida se atributo de objeto esta nulo, retorna vazio caso esteja e nao gera NullPointerException</h6>
+  <p>Tarefa: {{ tarefa.des }}</p>
+
+  <!--Important: Nesse caso ira estourar NullPointerException-->
+<!--  <p>Responsavel: {{ tarefa.responsavel.nome }}</p>-->
+
+  <!--Important: Nesse caso precisei validar todo o objeto para saber se "nome" nao esta nulo, inviavel quando se tem varios objetos um dentro do outro-->
+  <p>Responsavel: {{ tarefa.responsavel.usuario !== null ? tarefa.responsavel.usuario.nome : ''}}</p>
+
+  <!--Important: (*) Mesma validacao que a de cima, ele retorna "" caso objeto venha nulo e nao estoura Exception-->
+  <p>Responsavel: {{ tarefa.responsavel?.usuario?.nome}}</p>
+</div>
