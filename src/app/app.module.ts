@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
-import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch.component';
-import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.component';
-import { DiretivaNgclassComponent } from './diretiva-ngclass/diretiva-ngclass.component';
-import { DiretivaNgstyleComponent } from './diretiva-ngstyle/diretiva-ngstyle.component';
+import {AppComponent} from './app.component';
+import {NgModule} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
-import { ExemploNgContentComponent } from './exemplo-ng-content/exemplo-ng-content.component';
+import {BrowserModule} from '@angular/platform-browser';
+
+import {DiretivaNgifComponent} from './diretiva-ngif/diretiva-ngif.component';
+import {DiretivaNgswitchComponent} from './diretiva-ngswitch/diretiva-ngswitch.component';
+import {DiretivaNgforComponent} from './diretiva-ngfor/diretiva-ngfor.component';
+import {DiretivaNgclassComponent} from './diretiva-ngclass/diretiva-ngclass.component';
+import {DiretivaNgstyleComponent} from './diretiva-ngstyle/diretiva-ngstyle.component';
+import {OperadorElvisComponent} from './operador-elvis/operador-elvis.component';
+import {ExemploNgContentComponent} from './exemplo-ng-content/exemplo-ng-content.component';
+import {FundoAmareloDirective} from './shared/fundo-amarelo.directive';
+import {DiretivaCustomizadaComponent} from './diretiva-customizada/diretiva-customizada.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ExemploNgContentComponent } from './exemplo-ng-content/exemplo-ng-conte
     DiretivaNgclassComponent,
     DiretivaNgstyleComponent,
     OperadorElvisComponent,
-    ExemploNgContentComponent
+    ExemploNgContentComponent,
+    FundoAmareloDirective,
+    DiretivaCustomizadaComponent
   ],
   imports: [
     BrowserModule,
@@ -29,4 +33,5 @@ import { ExemploNgContentComponent } from './exemplo-ng-content/exemplo-ng-conte
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
