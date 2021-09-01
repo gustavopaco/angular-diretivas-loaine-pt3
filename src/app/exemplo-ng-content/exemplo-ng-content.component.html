@@ -1,0 +1,22 @@
+<div class="mb-3">
+<!--IMPORTANT: Trabalhando com ng-content-->
+  <h2 class="text-center">< ng-content ></h2>
+
+  <!--Note: conteudo vindo do Pai direto para o HTML e preenchido na Tag 'ng-content'
+        | ESTA VAZIO pois, a partir do momento que eh definido Tags - Identificadoras, exemplo abaixo, ele nao sabe mais
+        qual qual conteudo preencher mesmo que o pai face referencia a ele sem colocar nenhuma Tag // Descomentar caso necessario para estudo-->
+<!--  <div class="card mb-3">-->
+<!--    <h5 class="card-header">Titulo</h5>-->
+<!--    <div class="card-body">-->
+<!--      <ng-content></ng-content>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <!--Note: conteudo vindo do Pai direto para o HTML e preenchido na Tag 'ng-content' utilizando seletores class do PAI-->
+  <div class="card mb-3">
+    <ng-content select=".titulo"></ng-content>
+    <div class="card-body">
+      <ng-content select=".corpo"></ng-content>
+    </div>
+  </div>
+</div>
